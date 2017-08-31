@@ -1,0 +1,9 @@
+{
+  "animal to search for": "kitten,cat",
+  "comment^^": "separate search terms with a comma and no space",
+  "comment^^": "two-word search terms with a space between (like 'baby bunny') will also work",
+  
+  "wordcount required for bonus animal": 40000,
+  "resubmit within this many days for bonus animal": 7,
+  "number of submissions of the same work required for bonus animal": 8
+}

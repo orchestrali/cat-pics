@@ -1,0 +1,247 @@
+/* styles */
+/* called by your view template */
+
+/* You might want to try something fancier: */
+/* less: http://lesscss.org/ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+}
+
+h1 {
+  font-weight: bold;
+  color: #117;
+  margin-left: 15px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+div.tiles {
+  display: inline-block;
+  max-width: 1500px;
+}
+
+.tiles .tile {
+  float: left;
+  width: 298px;
+  height: 373px;
+  border: 1px solid #001a2f;
+  margin: 25px 15px 10px 15px;
+
+  background-color: #d1dfff;
+  border-radius: 40px;
+  box-shadow: 2px 2px 5px #02223c;
+}
+
+.kitten-container {
+  position: relative;
+  width: 296px;
+  height: 195px;
+  overflow: hidden;
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+  z-index: 4;
+}
+
+.kitten-container .trigger {
+  position: absolute;
+  float: left;
+  top: 0;
+  height: 165px;
+  z-index: 3;
+}
+
+.kitten-container.of4 .trigger {
+  width: 25%;
+}
+
+.kitten-container.of3 .trigger {
+  width: 33.33%;
+}
+
+.kitten-container.of2 .trigger {
+  width: 50%;
+}
+
+.kitten-container.of1 .trigger {
+  width: 100%;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-top-left-radius: 39px;
+  border-top-right-radius: 39px;
+  background-color: #000;
+}
+
+.wrapper.n1 {
+  left: 0;
+}
+
+.wrapper.n2, .wrapper.n3, .wrapper.n4 {
+  left: 298px;
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
+}
+
+.wrapper.n3 {
+  z-index: 1;
+}
+
+.wrapper.n4 {
+  z-index: 2;
+}
+
+.kittencredit {
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  padding-top: 0px;
+  background-color: #d1dfff;
+  
+  
+}
+
+.kittencredit p {
+  color: #777;
+  margin-top: 7px;
+  margin-right: 7px;
+  font-size: 10px;
+  text-align: right;
+  
+}
+
+.kittencredit a {
+  color: #777;
+  text-decoration: none;
+}
+
+.kittencredit a:hover {
+  color: #444;
+}
+
+.trigger.n1 {
+  border-top-left-radius: 39px;
+}
+
+.trigger.n2.of4 {
+  left: 25%;
+}
+
+.trigger.n2.of3 {
+  left: 98.7px;
+}
+
+.trigger.n3.of4 {
+  left: 50%;
+}
+
+.trigger.n2.of2, .trigger.n3.of3, .trigger.n4.of4 {
+  right: 0;
+  border-top-right-radius: 39px;
+}
+
+.trigger .indicator {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #777;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out, background-color 400ms ease-in-out;
+}
+
+.kitten-container:hover .indicator {
+  opacity: 1;
+}
+
+.trigger:hover > .indicator {
+  background-color: #aaa;
+}
+/*
+.trigger.n2:hover + .wrapper.n2 {
+  transform: translateX(-298px);
+}
+
+.trigger.n3:hover + .wrapper.n3 {
+  transform: translateX(-298px);
+}
+
+.trigger.n4:hover + .wrapper.n4 {
+  transform: translateX(-298px);
+}
+*/
+.transform {
+  transform: translateX(-298px);
+}
+
+
+img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+div.info {
+  position: relative;
+  margin-top: 10px;
+  height: 125px;
+  width: 296px;
+}
+
+h3.name {
+  color: #117;
+  text-align: center;
+  text-shadow: 1px 1px #aaa;
+  display: table-cell;
+  vertical-align: middle;
+  width: 296px;
+  height: 80px;
+  
+}
+
+.info p {
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: none;
+  color: #115;
+  margin-bottom: 0;
+}
+
+p.date {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+footer > a {
+  color: #BBBBBB;
+}
+
+.nicejob {
+  text-decoration: line-through;
+}
